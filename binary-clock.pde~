@@ -1,3 +1,5 @@
+// Previous version - monochromatic and no comments
+
 Digit s1, s2, s4, s8, s16, s32, 
       m1, m2, m4, m8, m16, m32, 
       h1, h2, h4, h8, h16;
