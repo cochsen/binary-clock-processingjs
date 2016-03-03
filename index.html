@@ -4,11 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link href="css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css" />
+	<link href="css/sketch.css" rel="stylesheet" type="text/css" />
   <script src="libraries/jquery-1.12.1.min.js"></script>
   <script src="libraries/jquery.mobile-1.4.5.js"></script>
   <script src="libraries/p5.js"></script>
   <script src="libraries/p5.dom.js"></script>
-  <title>JS Bin</title>
+	<script src="js/sketch.js"></script>
+  <title>Binary Clock</title>
 </head>
 <body>
   <div data-role="page" id="main">
@@ -18,9 +20,15 @@
       <a class="ui-button" href="#about" data-icon="info" data-transition="flip" data-direction="reverse">About</a>
     </div>
     <div data-role="ui-content">
-      <div id="clock"></div>
+			<div class="ui-body">
+				<div id="clock"></div>
+			</div>
     </div>
-    <div data-role="panel" id="settings" data-display="reveal">
+  </div>
+	<div data-role="page" id="settings">
+    <div data-role="header">
+      <h1>Settings</h1>
+      <a class="ui-button" href="#main" data-icon="back" data-transition="flip" data-direction="reverse">Back</a>
     </div>
   </div>
   <div data-role="page" id="about">
