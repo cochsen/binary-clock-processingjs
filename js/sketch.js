@@ -4,13 +4,16 @@
      Copyright Chris Ochsenreither 2013
 */
 
+var canvas
+var ow, oh
+var wc, hc
+
 /*
      Declare the binary digit light objects:
      s - second
      m - minute
      h - hour
 */
-var canvas
 
 var s1, s2, s4, s8, s16, s32
 var m1, m2, m4, m8, m16, m32
@@ -34,14 +37,17 @@ var c
 
 function setup() {
   // Set screen size to 384 pixels wide by 512 pixels tall
-  canvas = createCanvas(384, 512)
+  canvas = createCanvas(displayWidth*0.9, displayHeight*0.8)
   canvas.parent('canvasDiv')
   BG = color(40, 40, 40)
   SEC = color(0, 255, 0)
   MIN = color(255, 0, 0)
   HR = color(0, 0, 255)
   LABEL = color(225, 225, 225)
-
+  ow = 384
+  oh = 512
+  wc = displayWidth*0.9/ow
+  hc = displayHeight*0.8/oh
   /*
     Construct Digit objects
     Parameters:
@@ -58,28 +64,28 @@ function setup() {
     Note: all digits objects are the same regardless of time'
     increment
   */
-  s1 = new Digit(260, 370, 90, 65, BG, SEC)
-  m1 = new Digit(165, 370, 90, 65, BG, MIN)
-  h1 = new Digit(70, 370, 90, 65, BG, HR)
+  s1 = new Digit(260*wc, 370*hc, 90*wc, 65*hc, BG, SEC)
+  m1 = new Digit(165*wc, 370*hc, 90*wc, 65*hc, BG, MIN)
+  h1 = new Digit(70*wc, 370*hc, 90*wc, 65*hc, BG, HR)
 
-  s2 = new Digit(260, 300, 90, 65, BG, SEC)
-  m2 = new Digit(165, 300, 90, 65, BG, MIN)
-  h2 = new Digit(70, 300, 90, 65, BG, HR)
+  s2 = new Digit(260*wc, 300*hc, 90*wc, 65*hc, BG, SEC)
+  m2 = new Digit(165*wc, 300*hc, 90*wc, 65*hc, BG, MIN)
+  h2 = new Digit(70*wc, 300*hc, 90*wc, 65*hc, BG, HR)
 
-  s4 = new Digit(260, 230, 90, 65, BG, SEC)
-  m4 = new Digit(165, 230, 90, 65, BG, MIN)
-  h4 = new Digit(70, 230, 90, 65, BG, HR)
+  s4 = new Digit(260*wc, 230*hc, 90*wc, 65*hc, BG, SEC)
+  m4 = new Digit(165*wc, 230*hc, 90*wc, 65*hc, BG, MIN)
+  h4 = new Digit(70*wc, 230*hc, 90*wc, 65*hc, BG, HR)
 
-  s8 = new Digit(260, 160, 90, 65, BG, SEC)
-  m8 = new Digit(165, 160, 90, 65, BG, MIN)
-  h8 = new Digit(70, 160, 90, 65, BG, HR)
+  s8 = new Digit(260*wc, 160*hc, 90*wc, 65*hc, BG, SEC)
+  m8 = new Digit(165*wc, 160*hc, 90*wc, 65*hc, BG, MIN)
+  h8 = new Digit(70*wc, 160*hc, 90*wc, 65*hc, BG, HR)
 
-  s16 = new Digit(260, 90, 90, 65, BG, SEC)
-  m16 = new Digit(165, 90, 90, 65, BG, MIN)
-  h16 = new Digit(70, 90, 90, 65, BG, HR)
+  s16 = new Digit(260*wc, 90*hc, 90*wc, 65*hc, BG, SEC)
+  m16 = new Digit(165*wc, 90*hc, 90*wc, 65*hc, BG, MIN)
+  h16 = new Digit(70*wc, 90*hc, 90*wc, 65*hc, BG, HR)
 
-  s32 = new Digit(260, 20, 90, 65, BG, SEC)
-  m32 = new Digit(165, 20, 90, 65, BG, MIN)
+  s32 = new Digit(260*wc, 20*hc, 90*wc, 65*hc, BG, SEC)
+  m32 = new Digit(165*wc, 20*hc, 90*wc, 65*hc, BG, MIN)
 
 }
 
@@ -159,15 +165,15 @@ function draw() {
     h - hour
     Write text to screen with text function
  */
- text("s", 305, 465)
- text("m", 210, 465)
- text("h", 115, 465)
- text("32", 35, 50)
- text("16", 35, 120)
- text("8", 35, 190)
- text("4", 35, 260)
- text("2", 35, 330)
- text("1", 35, 400)
+ text("s", 305*wc, 465*hc)
+ text("m", 210*wc, 465*hc)
+ text("h", 115*wc, 465*hc)
+ text("32", 35*wc, 50*hc)
+ text("16", 35*wc, 120*hc)
+ text("8", 35*wc, 190*hc)
+ text("4", 35*wc, 260*hc)
+ text("2", 35*wc, 330*hc)
+ text("1", 35*wc, 400*hc)
 
 }
 
