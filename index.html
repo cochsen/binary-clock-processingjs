@@ -31,6 +31,48 @@
       <h1>Settings</h1>
       <a class="ui-button" href="#main" data-icon="back" data-transition="flip" data-direction="reverse">Back</a>
     </div>
+    <div data-role="ui-content">
+      <div data-role="ui-body">
+        <form>
+          <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <legend>Themes</legend>
+            <input type="radio" name="theme-selection" id="radio-basic-light" value="0">
+            <label for="radio-basic-light">Basic Light</label>
+            <input type="radio" name="theme-selection" id="radio-basic-dark" value="1" checked="checked">
+            <label for="radio-basic-dark">Basic Dark</label>
+            <input type="radio" name="theme-selection" id="radio-tech-light" value="2">
+            <label for="radio-tech-light">Tech Light</label>
+            <input type="radio" name="theme-selection" id="radio-tech-dark" value="3">
+            <label for="radio-tech-dark">Tech Dark</label>
+          </fieldset>
+          <fieldset data-role="controlgroup" data-mini="true">
+            <legend>Display</legend>
+            <input type="checkbox" name="show-time" id="show-time">
+            <label for=show-time>Show Time</label>
+            <input type="checkbox" name="twenty-four" id="twenty-four">
+            <label for="twenty-four">24 Hour</label>
+          </fieldset>
+          <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+            <legend>Colors</legend>
+            <input type="radio" name="unit-selection" id="radio-seconds" value="0">
+            <label for="radio-seconds">Seconds</label>
+            <input type="radio" name="unit-selection" id="radio-minutes" value="0">
+            <label for="radio-minutes">Minutes</label>
+            <input type="radio" name="unit-selection" id="radio-hours" value="0">
+            <label for="radio-hours">Hours</label>
+          </fieldset>
+          <label for="red">Red</label>
+          <input type="range" name="red" id="range" data-highlight="true" data-mini-"true" min="0" max="100" value="0">
+          <label for="red">Green</label>
+          <input type="range" name="green" id="range" data-highlight="true" data-mini-"true" min="0" max="100" value="0">
+          <label for="red">Blue</label>
+          <input type="range" name="blue" id="range" data-highlight="true" data-mini-"true" min="0" max="100" value="0">
+          <div id=swatch>Swatch</div>
+          <label for="opacity">Opacity (All)</label>
+          <input type="range" name="opacity" id="range" data-highlight="true" data-mini-"true" min="0" max="100" value="0">
+        </form>
+      </div>
+    </div>
   </div>
   <div data-role="page" id="about">
     <div data-role="header">
